@@ -1,0 +1,93 @@
+.bs-example{
+   margin: 20px;
+}
+.navbar{
+    background-color: burlywood;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+li{
+    font-size:18px;
+}
+.jumbotron{
+    background-color: burlywood;
+   
+    /*background-image: url("../images/PizzaCoke.png");
+    background-size: contain;*/
+    background-position: right;
+    
+    background-repeat: no-repeat;
+}
+h1{
+    font-family: cursive;
+    font-style: italic;
+}
+h3{
+    color: crimson;
+}
+#title{
+    color: blueviolet;
+    font-family: cursive;
+    font-style: italic;
+    text-align: center;
+}
+.content{
+    background-image: url("../images/pizza1.png");
+    background-size: 90%;
+    display: block;
+    padding:0;
+    margin: 0;
+    height:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.custom{
+    opacity: 0.9;
+    width:60%;
+    margin:auto;
+}
+.col-md-6{
+    padding-right: 50px;
+}
+.form-horizontal{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.btn{
+    margin-right: 20px;
+}
+#signup{
+    margin-right: 10px;
+}
+#submit_signup_information{
+    margin-top: 10px;
+}
+#submit_address_information{
+    margin-top: 10px;
+}
+.hidden{
+    color: blue;
+}
+.show{
+    margin-top: 10px;
+    background-color:darksalmon;   
+}
+#street_show, #apartment_show, #city_show, #province_show, #phonenumber_show, #email_show, #size_data, #crust_data, #sauce_data, #Meat_data, #number_data{    /* setting fonts for printing all selected information */
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 20px;
+}
+#instruction{
+    font-family: monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: crimson;
+}
+#total_data, #tax_data, #grandtotal_data{      /* showing prices in different font color and size. */
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 25px;
+    color: crimson;
+}

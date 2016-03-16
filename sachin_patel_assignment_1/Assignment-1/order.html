@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+        Conestoga Pizzeria- Order
+        </title>
+        <!-- linking css, bootstrap and javascript files -->
+        <link rel="icon" href="images/clogo.png" type="image/jpg" sizes="16X16">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="Styles/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="Scripts/myscript.js"></script>
+    </head> 
+    <body>
+    <div class="container">                                 
+            <!--for Navigation Bar -->
+            <div class="navbar navbar-default navbar-fixed">
+                <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <img src="images/clogo.png" alt="conestoga" height="50px" width="35px">
+                    </div>
+                    <div class="collapse navbar-collapse" id="example">                       <!-- creating Collapsable menu for mobile screens -->
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                            <li><a href="order.html"><span class="glyphicon glyphicon-shopping-cart"></span>Order</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-heart-empty"></span>About us</a></li>
+                            <li><a href="index.html"><span class="glyphicon glyphicon-earphone"></span>Contact us</a></li>
+                        </ul>
+                        <a href="" class="btn btn-primary navbar-btn navbar-right" id="login">Login</a>
+                        <a href="" class="btn btn-primary navbar-btn navbar-right" id="signup">Sign up</a>
+                    </div>
+                </div>
+            </div>
+            <!-- for Banner -->
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="col-md-8">
+                        <h1>Conestoga Pizzeria</h1>
+                        <h3>Good Friends. Great Pizza.</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/PizzaCoke.png" class="img-responsive"> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <!-- for Address Information -->
+                <div class="col-md-6" id="address_information" disabled="true">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-map-marker"></span> Address Information
+                        </div>
+                        <form class="form-horizontal" name="address">
+                            <div id="errors" class="alert hidden">
+                                <span id="error" class="alert alert-danger"></span>
+                            </div>
+                            <label for="street">Street Address:</label> 
+                            <input type="text" class="form-control" id="street" placeholder="Enter Your Street Address">
+                            
+                            <label for="apartment"> Apratment No.:</label>
+                            <input type="text" class="form-control" id="apartment" placeholder="Enter Your Apartment Number">
+                            
+                            <label for="city">City:</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter Your City">
+
+                            
+                            <label for="province">Province:</label>
+                            <select class="form-control" id="province">
+                                <option>ON</option>
+                                <option>QC</option>
+                                <option>MB</option>
+                                <option>SK</option>
+                            </select>
+                            
+                            <label for="phonenumber">Phone Number:</label>
+                            <input type="text" class="form-control" id="phonenumber" placeholder="Enter Your Phone Number">
+                            
+                            <label for="e-mail">E-mail:</label>
+                            <input type="text" class="form-control" id="e-mail" placeholder="Enter Your Email id">
+                            <button type="button" class="btn btn-primary" id="submit_address_information">Submit</button>
+                        </form>
+                    </div>
+                </div> 
+                <!-- For Personal Information-->
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-info-sign"></span> Information
+                        </div>
+                        <div>
+                            <ul>
+                                <li id="instruction">Price will be According to Your selected Size, Crust and Toppings.</li>
+                                <li id="instruction">Small Size - $5</li>
+                                <li id="instruction">Medium Size - $10</li>
+                                <li id="instruction">Large Size - $15</li>
+                                <li id="instruction">X-Large - $20 </li>
+                                <li id="instruction">Stuff Crust - $2 extra</li>
+                                <li id="instruction">Each Toppings will cost you $0.5 More.</li>
+                                <li id="instruction">First Topping will be free.</li>
+                                <li id="instruction">You can select your favourite Sauce.</li>
+                                <li id="instruction">Please select Current Option, So, You can see next option.</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            
+        
+            <div class="container" id="address_show_container">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                        <span class="glyphicon glyphicon-map-marker"></span> Your Address
+                        
+                    </div>
+                    <span id="street_show"></span>
+                    <span id="apartment_show"></span>
+                    <span id="city_show"></span>
+                    <span id="province_show"></span>
+                    <span id="phonenumber_show"></span>
+                     <span id="email_show"></span>
+                 </div>
+            </div>
+            <!--Pizza Information -->
+            <div class="container">
+                <h3 id="title">Create Your Own Pizza</h3>
+                <div class="col-md-4" id="size_div">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-hand-down"></span> Select Size:
+                        </div>  
+                        <form id="size_select">
+                            <ul class="radio">
+                                <li><input type="radio" name="size" id="small" value="Small"> Small</li>
+                                <li><input type="radio" name="size" id="medium" value="Medium"> Medium</li>
+                                <li><input type="radio" name="size" id="large" value="Large"> Large</li>
+                                <li><input type="radio" name="size" id="x-large" value="X-Large"> X-Large</li>
+                            </ul>    
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" id="crust_div">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-hand-down"></span> Select Pizza Crust:
+                        </div> 
+                        <form id="crust_select">
+                            <ul class="radio">
+                                <li><input type="radio" name="crust" id="regular" value="Regular"> Regular</li>
+                                <li><input type="radio" name="crust" id="stuff_crust" value="Stuff Crust"> Stuff Crust</li>
+                                <li><input type="radio" name="crust" id="crunchy_thin" value="Crunchy Thin"> Crunchy Thin</li>
+                                <li><input type="radio" name="crust" id="thick" value="Thick"> Thick</li>
+                            </ul>    
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" id="sauce_div">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-hand-down"></span> Select Sauce:
+                        </div> 
+                        <form id="sauce_select">
+                            <ul class="radio">
+                                <li><input type="radio" name="sauce" id="bbq_sauce" value="BBQ_Sauce"> BBQ Sauce</li>
+                                <li><input type="radio" name="sauce" id="alfredo_pasta" value="Alfredo_Pasta"> Alfredo Pasta</li>
+                                <li><input type="radio" name="sauce" id="sandwich_ranch" value="Sandwich_Ranch"> Sandwich Ranch</li>
+                                <li><input type="radio" name="sauce" id="garlic_parmeson" value="Garlic_Parmeson"> Garlic Parmeson</li>
+                            </ul>    
+                        </form> 
+                    </div>
+                </div>
+
+            </div>
+            <!--Toppings-->
+            <div class="container">
+                <!--Meat Toppings-->
+                <div class="col-md-6" id="meat_div">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-hand-down"></span> Select Meat Toppings:
+                        </div>  
+                        <form class="form-horizontal" id="meat_toppings">
+                            <ul class="checkbox">
+                                <li><input type="checkbox" name="meat" id="pepperoni" value="Pepperoni">Pepperoni</li>
+                                <li><input type="checkbox" name="meat" id="bacon" value="Bacon">Bacon</li>
+                                <li><input type="checkbox" name="meat" id="ham" value="Ham">Ham</li>
+                                <li><input type="checkbox" name="meat" id="sausage" value="Sausage">Sausage</li>
+                                <li><input type="checkbox" name="meat" id="brooklyn_pepperoni" value="BrooklynPepperoni">Brooklyn Pepperoni</li>
+                                <li><input type="checkbox" name="meat" id="beef" value="Beef">Beef</li>
+                                <li><input type="checkbox" name="meat" id="chicken" value="Chicken">Chicken</li>
+                                <li><input type="checkbox" name="meat" id="phily_steak" value="PhilySteak">Phily Steak</li>
+                                <li><input type="checkbox" name="meat" id="anchovy" value="Anchovy">Anchovy</li>
+                                <li><input type="checkbox" name="meat" id="green_pepper" value="GreenPepper">Green Pepper</li>
+                                <li><input type="checkbox" name="meat" id="onion" value="Onion">Onion</li>
+                                <li><input type="checkbox" name="meat" id="pinapple" value="Pinapple">Pinapple</li>
+                            </ul>
+                            
+                            <label for="number_of_pizza">Select Number of Pizza:</label>
+                            <select class="form-control" id="number_of_pizza">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <button type="button" class="btn btn-primary" id="submit_meat_toppings">Submit</button>
+                        </form>
+                    </div>    
+                </div>
+                
+                <div class="col-md-6" id="vegi_div">
+                    <div class="panel panel-primary">
+                        <div class="panel panel-heading">
+                            <span class="glyphicon glyphicon-print"></span> Your Order:
+                        </div>  
+                        <span id="size_data"></span>
+                        <span id="crust_data"></span>
+                        <span id="sauce_data"></span>
+                        <span id="Meat_data"></span>
+                        <span id="number_data"></span>
+                        <span id="total_data"></span>
+                        <span id="tax_data"></span>
+                        <span id="grandtotal_data"></span>
+                    </div>
+                </div>    
+            </div>
+        </div>  
+    </body>
+    
+</html>
